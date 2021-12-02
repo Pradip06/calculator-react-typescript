@@ -1,0 +1,63 @@
+.employeesListViewTable {
+  width: 100%;
+  border: none;
+  border-collapse: collapse;
+  position: relative;
+}
+.employeesListViewTable .empheading td {
+  border: none;
+  text-align: left;
+  font-family: "Poppins";
+  font-size: 11px;
+  font-weight: 500;
+  color: rgb(39, 159, 159);
+  font-weight: 5px;
+  padding-top: 10px;
+}
+
+.employeesListViewTable .employeesList td {
+  color: #838282;
+  text-align: left;
+  font-family: "Poppins";
+  font-size: 11px;
+  font-weight: 500;
+  padding-top: 10px;
+  border: none;
+}
+.employeesListViewProfile {
+  width: 35px;
+  height: 35px;
+  position: relative;
+  background-image: url("../../assets/images/team-3@2x.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50px;
+}
+
+.empheading {
+  box-shadow: inset 0px 1px 4px #9a9a9a61;
+  border-radius: 5px;
+  background-color: rgb(249, 254, 254);
+}
+
+/* .employeesListViewTable .employeesList:hover { */
+  /* transform: matrix(1, 0, 0, 1, 0, 0); */
+  /* background-color: rgba(228, 245, 245, 1); */
+/* } */
+
+.PencilIcon{
+  position: relative;
+  right: 19px;
+  top: -2px;
+  width: 15px;
+}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
