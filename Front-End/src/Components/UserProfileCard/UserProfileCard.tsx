@@ -6,8 +6,8 @@ const UserProfileCard = () => {
     <>
       <div className="profileCardBox">
         <Card
-          valueHeight="122px"
-          valueWidth="159px"
+          valueHeight="150px"
+          valueWidth="220px"
           valueBoxShadow="0 0 4px #71cacc96"
           valueBoxRadius="5px"
         >

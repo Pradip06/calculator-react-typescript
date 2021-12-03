@@ -1,12 +1,12 @@
 .profileCardBox {
   position: relative;
-  left: 18px;
+  left: 25px;
   top: 0px;
 }
 
 .profilePic {
-  width: 64px;
-  height: 64px;
+  width: 75px;
+  height: 75px;
   position: relative;
   top: 10px;
   background-image: url("../../assets/images/team-3@2x.png");
@@ -24,7 +24,7 @@
   font-family: Poppins;
   font-style: normal;
   font-weight: normal;
-  font-size: 11px;
+  font-size: 13px;
   color: rgba(39, 159, 159, 1);
   letter-spacing: 0.05px;
   margin: auto;
@@ -39,9 +39,10 @@
   font-family: Poppins;
   font-style: normal;
   font-weight: normal;
-  font-size: 11px;
+  font-size: 15px;
   position: relative;
   top: 16px;
+  left: -15px;
   color: rgba(83, 83, 83, 1);
   margin: auto;
 }

@@ -38,10 +38,10 @@ const IconCard: FunctionComponent = () => {
   ];
   return (
     <>
-      <div style={{ marginTop: "25px", marginLeft: "18px" }}>
+      <div style={{ marginTop: "25px", marginLeft: "28px" }}>
         <Card
-          valueHeight="165px"
-          valueWidth="159px"
+          valueHeight="425px"
+          valueWidth="215px"
           valueBoxShadow="0px 0px 4px #9a9a9a61"
           valueBoxRadius="5px"
         >
@@ -50,8 +50,8 @@ const IconCard: FunctionComponent = () => {
               <div style={{ display: "flex" }}>
                 <div>
                   <Card
-                    valueHeight="80px"
-                    valueWidth="80px"
+                    valueHeight="107px"
+                    valueWidth="107px"
                     valueBoxShadow="0px 1px 4px #e4f5f5"
                     valueBoxRadius="0px"
                   >
@@ -85,8 +85,8 @@ const IconCard: FunctionComponent = () => {
                 <div>
                   {/* #e4f5f5 */}
                   <Card
-                    valueHeight="80px"
-                    valueWidth="80px"
+                    valueHeight="107px"
+                    valueWidth="107px"
                     valueBoxShadow=" 1px 1px 4px #e4f5f5"
                     valueBoxRadius="0px"
                   >

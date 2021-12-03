@@ -1,4 +1,4 @@
-import { FunctionComponent } from "react";
+import { FunctionComponent, useEffect } from "react";
 import Card from "../Card/Card";
 import "./EmployeesListView.css";
 import { useState } from "react";
@@ -7,14 +7,17 @@ import Pencilcon from "../../assets/images/pencilcon.png";
 import Checkbox from "../CheckBox/Checkbox";
 type props = {
   empProfileDetailsListView: any;
+  // history:any;
 };
 
 const EmployeesListView: FunctionComponent<props> = ({
   empProfileDetailsListView,
+  // history,
 }) => {
+
   // const [isChecked, setIsChecked] = useState(false);
   // const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    // setIsChecked(!isChecked);
+  // setIsChecked(!isChecked);
   // };
   return (
     <>
@@ -23,7 +26,7 @@ const EmployeesListView: FunctionComponent<props> = ({
         style={{ position: "relative", left: "1.7%", top: "25px" }}
       >
         <Card
-          valueHeight="195px"
+          valueHeight="410px"
           valueWidth="94%"
           valueBoxShadow="0px 0px 4px #9a9a9a61"
           valueBoxRadius="5px"
@@ -33,8 +36,9 @@ const EmployeesListView: FunctionComponent<props> = ({
             <table className="employeesListViewTable">
               <tr className="empheading">
                 <td></td>
+                <td></td>
                 <td>Full name</td>
-                <td>Emp. Code</td>
+                <td>Employee Code</td>
                 <td colSpan={2}>Emp. Mail</td>
                 <td>Owner</td>
                 <td>Reporting to</td>
@@ -42,12 +46,18 @@ const EmployeesListView: FunctionComponent<props> = ({
                 <td>Branch</td>
               </tr>
 
-              {empProfileDetailsListView.map((empDetails: any, id:number) => (
+              {empProfileDetailsListView.map((empDetails: any, id: number) => (
                 <tr className="employeesList">
                   <td>
                     <div>
                       <Checkbox
+                        // border="none"
+                        // boxShadow="inset 0px 0px 3px #9a9a9a61"
                         key={id}
+                      // color="#ffff"
+                      // height="15px" 
+                      // radius="5px" 
+                      // width="15px"                      
                       />
                     </div>
                   </td>
@@ -88,3 +98,15 @@ const EmployeesListView: FunctionComponent<props> = ({
 };
 
 export default EmployeesListView;
+
+function setFilterData(originalData: any) {
+  throw new Error("Function not implemented.");
+}
+function originalData(originalData: any) {
+  throw new Error("Function not implemented.");
+}
+
+function searchCallLogs(originalData: (originalData: any) => void, searchedItem: string) {
+  throw new Error("Function not implemented.");
+}
+

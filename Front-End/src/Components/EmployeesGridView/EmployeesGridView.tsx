@@ -23,6 +23,7 @@ const EmployeesGridView: FunctionComponent<props> = ({ empProfileDetails }) => {
               valueBoxShadow="0px 0px 2px #9a9a9a61"
               valueBoxRadius="5px"
             >
+              
               <div  className="Edit_icon">
               <Button
                 border="1px solid #add8e6"

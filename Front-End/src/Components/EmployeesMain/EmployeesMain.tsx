@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Card from "../Card/Card";
 import OptionSearchBox from "../OptionSearchBox/OptionSearchBox";
 import PlusIcon from "../../assets/images/plus_icon.png";
@@ -15,7 +15,129 @@ import FilterButton from "../../Components/Icons/IconsBtn"
 import EmployeesGridView from "../EmployeesGridView/EmployeesGridView";
 import { useLocation } from "react-router";
 import EmployeesListView from "../EmployeesListView/EmployeesListView";
-const EmployeesMain = () => {
+import TopBar from "../TopBar/Topbar";
+import commonStyle from "../common.module.css";
+
+
+type Props = {
+  history:any;
+};
+const EmployeesMain = ({history}:Props) =>{
+  
+  // const [filterData, setFilterData] = useState<any[] | undefined>(undefined);
+// const [callList, setCallList] = useState<any[] | undefined>(undefined);
+// const [selectedRows, setSelectedRows] = useState<any[]>([]);
+// const [selectedRowsData, setSelectedRowsData] = useState<any[]>([]);
+// const [searchedItem, setsearchedItem] = useState("");
+// const [columnModal, setColumnModal] = useState(false);
+// const [originalData, setOriginalData] = useState<any[] | undefined>(
+  // undefined
+// );
+// const [contactsMap, setcontactsMap] = useState<any>(undefined);
+
+// useEffect(() => {
+  // if (user.organization_id) {
+    // if (role === "Sales") {
+      // console.log(user);
+      // fetchUserCallLogs((data) => setCallList(data), user.uid);
+    // } else {
+      // fetchCallLogs((data) => setCallList(data), user.organization_id);
+    // }
+  // }
+// }, [role, user.organization_id]);
+// useEffect(() => {
+  // if (searchedItem.length === 0) {
+    // if (originalData) {
+      // setFilterData(originalData);
+    // }
+  // } else {
+    // if (originalData) {
+      // const data = searchCallLogs(originalData, searchedItem);
+      // setFilterData(data);
+    // }
+  // }
+  // eslint-disable-next-line
+// }, [searchedItem]);
+// useEffect(() => {
+  // let uidMap: { [key: string]: string } = {};
+  // if (organizationUsers) {
+    // organizationUsers.map((user: any) => {
+      // if (uidMap[user.uid]) {
+        // uidMap[user.uid] = user.user_first_name + " " + user.user_last_name;
+      // } else {
+        // uidMap[user.uid] = user.user_first_name + " " + user.user_last_name;
+      // }
+    // });
+    // setcontactsMap(uidMap);
+  // }
+// }, [organizationUsers]);
+// useEffect(() => {
+  // if (user.profile === "Sales") {
+    // if (callList !== undefined) {
+      // let finalList: any[] = [];
+      // callList?.forEach((item) => {
+        // item.data.map((val: any) => {
+          // finalList.push({
+            // uid: item.uid,
+            // created_by: user.uid,
+            // duration: val.callTime,
+            // created_at: val.created_at,
+            // customer_name: item.customer_name,
+            // stage: item.stage,
+            // contact_owner_email: item.contact_owner_email,
+            // project: item.project,
+            // location: item.location,
+            // budget: item.budget,
+            // contact_no: item.contact_no,
+            // inventory_type: item.inventory_type,
+            // source: item.source,
+            // transfer_status: item.transfer_status,
+          // });
+        // });
+      // });
+      // setOriginalData(finalList);
+    // }
+  // } else {
+    // if (callList !== undefined && contactsMap !== undefined) {
+      // let finalList: any[] = [];
+      // callList?.forEach((item) => {
+        // item.data.map((val: any) => {
+          // finalList.push({
+            // uid: item.uid,
+            // created_by: contactsMap[item.uid],
+            // duration: val.callTime,
+            // created_at: val.created_at,
+            // customer_name: item.customer_name,
+            // stage: item.stage,
+            // contact_owner_email: item.contact_owner_email,
+            // project: item.project,
+            // location: item.location,
+            // budget: item.budget,
+            // contact_no: item.contact_no,
+            // inventory_type: item.inventory_type,
+            // source: item.source,
+            // transfer_status: item.transfer_status,
+          // });
+        // });
+      // });
+      // console.log(finalList);
+      // setOriginalData(finalList);
+    // }
+  // }
+// }, [callList, contactsMap]);
+// useEffect(() => {
+  // if (role === "Lead Manager" || role === "CEO" || role === "Sales") {
+    // setFilterData(originalData);
+  // }
+  // if (role === "Team Lead") {
+    // if (originalData) {
+      // setFilterData(
+        // originalData.filter((item) => teamLeadUsers?.includes(item.uid))
+      // );
+    // }
+  // }
+// }, [originalData, role, teamLeadUsers]);
+
   let Designation = [
     "software enginner",
     "designer",
@@ -184,6 +306,18 @@ const EmployeesMain = () => {
   let location = useLocation();
   return (
     <>
+      <div className={commonStyle.topBar}>
+        <TopBar
+          history={history}
+          title={" "}
+          path={" "}
+          // onChange={(val) => setsearchedItem(val)}
+          filterText={"Status"}
+          // setColumnModal={(data) => setColumnModal(data)}
+          show={false}
+          showStatusBox={false}
+        />
+      </div>
       <div>
         <Card
           valueHeight="960px"
@@ -251,7 +385,7 @@ const EmployeesMain = () => {
 
               /><img className="FilterIcon" src={FilterIcon} alt="search" />
             </div>
-            <div style={{ marginLeft: "10px",marginTop: "15px" }}>
+            <div style={{ marginLeft: "10px", marginTop: "15px" }}>
               <FilterButton
                 border="1px solid #add8e6"
                 color="#ffff"
@@ -259,14 +393,14 @@ const EmployeesMain = () => {
                 height="40px"
                 onClick={() => console.log("You clicked on the button")}
                 radius="3px" />
-               </div><img className="doticon" src={doticon} alt="search" />
-               <div>
-               <img className="CrossIcon" src={CrossIcon} alt="search" />
-               </div>
-               
-               <div>
-               <img className="OptionIcon" src={OptionIcon} alt="search" />
-               </div>
+            </div><img className="doticon" src={doticon} alt="search" />
+            <div>
+              <img className="CrossIcon" src={CrossIcon} alt="search" />
+            </div>
+
+            <div>
+              <img className="OptionIcon" src={OptionIcon} alt="search" />
+            </div>
 
             {/* </div> */}
             {/* <div> */}
@@ -283,8 +417,8 @@ const EmployeesMain = () => {
               <EmployeesGridView empProfileDetails={empProfileDetails} />
             ) : location.pathname === "/employees/list" ? (
               <EmployeesListView
-                empProfileDetailsListView={empProfileDetailsListView}
-              />
+                  empProfileDetailsListView={empProfileDetailsListView}
+                />
             ) : (
               <h1>Wrong route</h1>
             )}
@@ -296,3 +430,15 @@ const EmployeesMain = () => {
 };
 
 export default EmployeesMain;
+function originalData(originalData: any) {
+  throw new Error("Function not implemented.");
+}
+
+function setFilterData(originalData: (originalData: any) => void) {
+  throw new Error("Function not implemented.");
+}
+
+function searchCallLogs(originalData: (originalData: any) => void, searchedItem: string) {
+  throw new Error("Function not implemented.");
+}
+

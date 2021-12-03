@@ -7,7 +7,7 @@ const Employees: FunctionComponent = () => {
     <>
       <HrMainScreen>
         <div className="hrMain">
-          <EmployeesMain></EmployeesMain>
+          <EmployeesMain history={undefined}></EmployeesMain>
         </div>
       </HrMainScreen>
     </>

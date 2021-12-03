@@ -4,13 +4,14 @@
   border-collapse: collapse;
   position: relative;
 }
+
 .employeesListViewTable .empheading td {
   border: none;
   text-align: left;
   font-family: "Poppins";
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 500;
-  color: rgb(39, 159, 159);
+  color: #626060;
   font-weight: 5px;
   padding-top: 10px;
 }
@@ -36,8 +37,8 @@
 }
 
 .empheading {
-  box-shadow: inset 0px 1px 4px #9a9a9a61;
-  border-radius: 5px;
+  /* box-shadow: inset 0px 1px 4px #9a9a9a61; */
+  /* border-radius: 5px; */
   background-color: rgb(249, 254, 254);
 }
 

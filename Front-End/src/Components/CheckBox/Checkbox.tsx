@@ -1,18 +1,56 @@
-import "../CheckBox/Checkbox.css";
+import React from "react";
+import "./Checkbox.css"
 
-export default function Checkbox() {
+// interface Props {
+// border: string;
+// color: string;
+// height: string;
+// radius: string;
+// width: string;
+// boxShadow:string
+// }
+
+function Checkbox() {
+  // border,
+  // color,
+  // height,
+  // radius,
+  // width,
+  // boxShadow
+
+
   return (
-              <div className="toppings-list-item">
-                <div className="left-section">
-                  <input
-                    type="checkbox"
-                  />
-                </div>
-              </div>
+    // <div className="toppings-list-item">
     
+        <input style={{
+          "height": "20px",
+          "width": "19px",
+          "border": "0.5px solid red",
+          "borderRadius":"15px",
+          "backgroundColor":"inherit",
+          "boxShadow":   "inset -1px -1px 12px #9a9a9a61",
+          "cursor": "default",
+          "appearance": "auto",
+          "boxSizing": "border-box"}}
+          type="checkbox"
+
+
+          // style={{
+            // backgroundColor: color,
+            // border,
+            // boxShadow,
+            // borderRadius: radius,
+            // height,
+            // width,   
+        //  }}
+        />
+      //  </div>
+  
+
   );
 }
 
+export default Checkbox;
 
 
 
